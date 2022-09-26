@@ -1,0 +1,12 @@
+  const styles = {
+            // backgroundColor: userAnswer[mcqNumber] === htmlEntityHandler(option) ? 'gray' : '',
+            backgroundColor: gameOver && 
+            (option == correctAnswer) ? 'green' : ((option == userAnswer[mcqNumber]) ? 'red fade' : 'fade')
+    }
+
+
+
+
+
+
+          return <li onClick={(e) => handleOptionSelection(e,mcqNumber)} className= {gameOver ?  (htmlEntityHandler(option) == (correct_answer)) ? 'green option' : ((htmlEntityHandler(option) == htmlEntityHandler(userAnswer[mcqNumber])) ? 'red fade option' : 'fade option'): userAnswer[mcqNumber] === htmlEntityHandler(option) ?  'gray option' : 'option'} key = {optionNumber}>{htmlEntityHandler(option)}</li>
